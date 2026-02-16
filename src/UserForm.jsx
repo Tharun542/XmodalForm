@@ -25,11 +25,6 @@ export default function UserForm({setIsOpen}){
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-      if(!name || !email || !phone || !dob){
-        alert("Please fill out all fields.");
-        return;
-      }
-
         if(phone.length!==10 || isNaN(phone)){
         alert(`Invalid phone number`);
         return;
@@ -80,7 +75,7 @@ export default function UserForm({setIsOpen}){
                         <label htmlFor="">Date of Birth:</label>
                         <input type="date" value={dob} onChange={(e)=>handleDob(e)} id="dob" required/>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="submit-button">Submit</button>
                 </form>
             </div>
         </div>
