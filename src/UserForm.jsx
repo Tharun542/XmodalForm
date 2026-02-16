@@ -31,19 +31,19 @@ export default function UserForm({setIsOpen}){
       }
 
         if(phone.length!==10 || isNaN(phone)){
-        alert(`Invalid phone number. Please enter a 10-digit number.`);
+        alert(`Invalid phone number`);
         return;
        }
        
        if(!email.includes("@")){
-        alert(`Please include an '@' in the email address. ${email} is missing an "@".`);
+        alert(`Invalid email`);
         return;
        }
        
        const today = new Date();
        const selectDate = new Date(dob)
        if(selectDate > today){
-        alert("Invalid date of birth. Date of birth is cannot be in the future.");
+        alert("Invalid date of birth");
         return;
        }
 
